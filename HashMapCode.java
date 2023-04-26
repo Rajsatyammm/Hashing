@@ -13,6 +13,18 @@ public class HashMapCode {
 
         private int n; // no of nodes in bucket
         private int N;
+        
+        private LinkedList<Node> buckets[];
+
+        @SuppressWarnings("uncheaked")
+        public HashMap() {
+            this.N = 4;
+            this.buckets = new LinkedList[4];
+
+            for (int i = 0; i < 4; i++) {
+                buckets[i] = new LinkedList<>();
+            }
+        }
       
       public static void main(String[] args) {
         HashMap<String, Integer> hm = new HashMap<>();
